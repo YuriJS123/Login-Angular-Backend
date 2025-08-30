@@ -11,7 +11,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest request) {
-        if ("yuri@email.com".equals(request.getEmail()) && "123456789".equals(request.getSenha())) {
+        if ("yuri@email.com".equals(request.getEmail()) && "12345678".equals(request.getSenha())) {
             return ResponseEntity.ok("Login bem-sucedido");
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas");
